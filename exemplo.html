@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Exemplo de Uso &#8212; Análise - Artista v1.0</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="shortcut icon" href="_static/mic.ico"/>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="prev" title="WikiScraping" href="generated/WikiScraping.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="pt_BR">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/mic.ico" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Análise - Artista v1.0</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="analisador.html">
+   Analisador de Dados
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/AnaliseLetras.html">
+     AnaliseLetras
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="gerador.html">
+   Gerador da Base de Dados
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/GeniusImport.html">
+     GeniusImport
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/SpotifyImport.html">
+     SpotifyImport
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/LimparCSV.html">
+     LimparCSV
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="generated/WikiScraping.html">
+     WikiScraping
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Exemplo de Uso
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/exemplo.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grupo-de-perguntas-1">
+   Grupo de Perguntas 1:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grupo-de-perguntas-2">
+   Grupo de Perguntas 2:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grupo-de-perguntas-3">
+   Grupo de Perguntas 3:
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Exemplo de Uso</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grupo-de-perguntas-1">
+   Grupo de Perguntas 1:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grupo-de-perguntas-2">
+   Grupo de Perguntas 2:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grupo-de-perguntas-3">
+   Grupo de Perguntas 3:
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="exemplo-de-uso">
+<h1>Exemplo de Uso<a class="headerlink" href="#exemplo-de-uso" title="Link permanente para este título">#</a></h1>
+<p>Para demonstrar a utilização do pacote foi feito um exemplo de uso utilizando uma série de perguntas, que forma respondidas com base nos dados das músicas da cantora ‘Adele’:</p>
+<p>Primeiro, é necessário criar a base de dados, para isso deve-se utlizar as funções na seção ‘Gerador da Base de Dados’.</p>
+<p>Para isso é necessário chamar algumas funções, que irão criar três arquivos ‘.csv’ na pasta chamada ‘Infos’, um com as letras das músicas, um com outros dados da discografia e, por último, um com os dados unidos:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+
+<span class="n">df_letras</span> <span class="o">=</span> <span class="n">SpotifyImport</span><span class="o">.</span><span class="n">criar_df_letras</span><span class="p">(</span><span class="n">ARTISTA</span><span class="p">)</span> <span class="c1"># Cria um DataFrame com as letras do artista escolhido</span>
+<span class="n">df_letras</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./Infos/Letras - </span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Exporta o df em um csv</span>
+
+<span class="n">df_dados</span> <span class="o">=</span> <span class="n">SpotifyImport</span><span class="o">.</span><span class="n">criar_df_dados</span><span class="p">(</span><span class="n">ARTISTA</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;album&quot;</span><span class="p">,</span> <span class="s2">&quot;single&quot;</span><span class="p">])</span> <span class="c1"># Cria um DataFrame com os dados das músicas do artista escolhido</span>
+<span class="n">df_dados</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./Infos/Dados - </span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Exporta o df em um csv</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">LimparCSV</span><span class="o">.</span><span class="n">juntar_dataframes</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./Infos/Letras - </span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;./Infos/Dados - </span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./Infos/</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Exporta o df em um csv</span>
+</pre></div>
+</div>
+<p>Agora que temos um arquivo chamado ‘Adele.csv’ com as informações de todas as músicas da Adele, podemos começar a fazer as análises.</p>
+<section id="grupo-de-perguntas-1">
+<h2>Grupo de Perguntas 1:<a class="headerlink" href="#grupo-de-perguntas-1" title="Link permanente para este título">#</a></h2>
+<ul class="simple">
+<li><p>Músicas mais ouvidas e músicas menos ouvidas por Álbum:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Músicas mais longas e músicas mais curtas por Álbum:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Músicas mais ouvidas e músicas menos ouvidas [em toda a história da banda ou artista]:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Músicas mais longas e músicas mais curtas [em toda a história da banda ou artista]:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Álbuns mais premiados:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Existe alguma relação entre a duração da música e sua popularidade?</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+</pre></div>
+</div>
+</section>
+<section id="grupo-de-perguntas-2">
+<h2>Grupo de Perguntas 2:<a class="headerlink" href="#grupo-de-perguntas-2" title="Link permanente para este título">#</a></h2>
+<p>Nesse grupo de perguntas, foi criado também TagClouds com as infromações obtidos nos primeiros 4 tópicos.</p>
+<ul class="simple">
+<li><p>Quais são as palavras mais comuns nos títulos dos Álbuns?</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+
+<span class="c1"># Imprime as palavras mais comuns e cria a tagcloud</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">palavras_comuns</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;nome&quot;</span><span class="p">,</span> <span class="s2">&quot;./Imgs/nome.png&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Saída: [(‘30’, 1), (‘21’, 1), (‘19’, 1)]</p>
+<ul class="simple">
+<li><p>Quais são as palavras mais comuns nos títulos das músicas?</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+
+<span class="c1"># Imprime as palavras mais comuns e cria a tagcloud</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">palavras_comuns</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;album&quot;</span><span class="p">,</span> <span class="s2">&quot;./Imgs/album.png&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Saída: [(‘love’, 6), (‘heart’, 2), (‘like’, 2)]</p>
+<ul class="simple">
+<li><p>Quais são as palavras mais comuns nas letras das músicas, por Álbum?</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+
+<span class="c1"># Imprime um dicionário com as palavras mais comuns e cria as tagclouds</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gerar_tag_cloud_por</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;letra&quot;</span><span class="p">,</span> <span class="s2">&quot;./Imgs/Albums&quot;</span><span class="p">,</span> <span class="s2">&quot;album&quot;</span><span class="p">))</span>
+
+
+<span class="n">Saída</span><span class="p">:</span> <span class="p">{</span><span class="mi">25</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;like&#39;</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;go&#39;</span><span class="p">,</span> <span class="mi">27</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;i&#39;m&quot;</span><span class="p">,</span> <span class="mi">26</span><span class="p">)],</span> <span class="mi">19</span><span class="p">:</span> <span class="p">[(</span><span class="s2">&quot;i&#39;m&quot;</span><span class="p">,</span> <span class="mi">44</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;love&#39;</span><span class="p">,</span> <span class="mi">26</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aye&#39;</span><span class="p">,</span> <span class="mi">24</span><span class="p">)],</span> <span class="mi">21</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;love&#39;</span><span class="p">,</span> <span class="mi">44</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;i&#39;ll&quot;</span><span class="p">,</span> <span class="mi">27</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;take&#39;</span><span class="p">,</span> <span class="mi">23</span><span class="p">)],</span> <span class="mi">30</span><span class="p">:</span> <span class="p">[(</span><span class="s2">&quot;i&#39;m&quot;</span><span class="p">,</span> <span class="mi">37</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;love&#39;</span><span class="p">,</span> <span class="mi">27</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="mi">27</span><span class="p">)]}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Quais são as palavras mais comuns nas letras das músicas, em toda a discografia?</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+
+<span class="c1"># Imprime as palavras mais comuns e cria a tagcloud</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">palavras_comuns</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;letra&quot;</span><span class="p">,</span> <span class="s2">&quot;./Imgs/letra.png&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Saída: [(“i’m”, 127), (‘love’, 117), (‘like’, 94)]</p>
+<ul class="simple">
+<li><p>O título de um álbum é tema recorrente nas letras?</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+
+<span class="c1"># Imprime um dicionário com a proporção entre as palavras no álbum e nas letras de suas músicas</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">proporção_comparativa</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;letra&quot;</span><span class="p">,</span> <span class="s2">&quot;album&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Saída: {25: ‘0/2725’, 19: ‘0/2884’, 21: ‘0/2810’, 30: ‘0/2898’}</p>
+<ul class="simple">
+<li><p>O título de uma música é tema recorrente nas letras?</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ARTISTA</span> <span class="o">=</span> <span class="s2">&quot;Adele&quot;</span> <span class="c1"># Nome do artista cujas letras serão obtidas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;./</span><span class="si">{</span><span class="n">ARTISTA</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span> <span class="c1"># Lê o arquivo criado</span>
+
+<span class="c1"># Imprime um dicionário com a proporção entre as palavras no título da música e a sua letra</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">proporção_comparativa</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s2">&quot;letra&quot;</span><span class="p">,</span> <span class="s2">&quot;nome&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Saída: {‘Love In The Dark’: ‘15/235’, ‘Strangers By Nature’: ‘5/133’, ‘Daydreamer’: ‘2/194’, ‘All Night Parking Interlude’: ‘12/169’, ‘One And Only’: ‘11/195’, ‘Can I Get It’: ‘72/270’, ‘Hold On’: ‘29/199’, “He Won’t Go”: ‘11/222’, ‘I Found A Boy’: ‘31/252’, ‘I Drink Wine’: ‘22/325’, ‘Turning Tables’: ‘18/253’, ‘Water Under the Bridge’: ‘33/252’, ‘When We Were Young’: ‘21/227’, ‘All I Ask’: ‘17/207’, “Don’t You Remember”: ‘32/198’, ‘Rolling in the Deep’: ‘49/344’, ‘Love Is A Game’: ‘23/261’, ‘My Same’: ‘4/334’, ‘My Little Love’: ‘10/202’, ‘Lovesong’: ‘0/186’, ‘Hometown Glory’: ‘4/245’, ‘Oh My God’: ‘11/274’, ‘Remedy’: ‘5/265’, ‘Easy On Me’: ‘21/207’, ‘Best For Last’: ‘10/312’, ‘Crazy For You’: ‘26/184’, ‘Rumour Has It’: ‘39/211’, ‘To Be Loved’: ‘20/258’, ‘Take It All’: ‘57/265’, ‘Cold Shoulder’: ‘8/293’, ‘Make You Feel My Love’: ‘36/187’, ‘Million Years Ago’: ‘9/289’, “I’ll Be Waiting”: ‘30/274’, ‘River Lea’: ‘40/361’, ‘Sweetest Devotion’: ‘8/223’, ‘Cry Your Heart Out’: ‘37/261’, ‘Someone Like You’: ‘17/235’, ‘Chasing Pavements’: ‘18/290’, ‘Right As Rain’: ‘12/234’, ‘Woman Like Me’: ‘17/339’, ‘Melt My Heart To Stone’: ‘27/242’, ‘Send My Love’: ‘8/174’, ‘First Love’: ‘19/166’, ‘Hello’: ‘7/256’, ‘I Miss You’: ‘16/236’, ‘Tired’: ‘5/203’, ‘Set Fire to the Rain’: ‘14/175’}</p>
+</section>
+<section id="grupo-de-perguntas-3">
+<h2>Grupo de Perguntas 3:<a class="headerlink" href="#grupo-de-perguntas-3" title="Link permanente para este título">#</a></h2>
+<p>Elaborar mais 3 perguntas sobre temas e características da discografia da banda.</p>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="generated/WikiScraping.html" title="anterior página">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">anterior</p>
+            <p class="prev-next-title">WikiScraping</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Dávila Meireles, Gustavo Rocha, Lívia Verly<br/>
+  
+      &copy; Copyright Meireles D.C.; Rocha G.R.; Verly L.M.S.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
